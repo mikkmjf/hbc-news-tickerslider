@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>eocjsNewsticker: A jQuery newsticker plugin</title>
+<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+<script src="eocjs-newsticker.js"></script>
+<link rel="stylesheet" href="eocjs-newsticker.css">
+<script>
+
+$(function() {
+
+  $("#example-1").eocjsNewsticker({
+    speed: 25,
+    timeout: 0.5
+  });
+
+  $("#example-2").eocjsNewsticker({
+    divider: "***",
+    type: 'ajax',
+    source: 'data.json',
+    interval: 30
+  });
+
+  $("#example-3").eocjsNewsticker({
+    type: 'ajax',
+    source: 'error.json',
+  });
+
+});
+
+</script>
+</head>
+<body>
+<div class="container">
+  <div id="example-2"></div>
+</div>
+</body>
+</html>
